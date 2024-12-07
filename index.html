@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Web Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Invitation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Interactive Web Page</h1>
-    <p>Click the buttons below to perform a task:</p>
-    <button onclick="performTask1()">Task 1: Show an alert</button>
-    <button onclick="performTask2()">Task 2: Change background color</button>
-    <button onclick="performTask3()">Task 3: Fetch data from an API</button>
+  <div id="container">
+    <!-- First Question -->
+    <h2 id="question1">Can I invite you to watch a movie with me?</h2>
+    <button id="yesButton" onclick="showDateQuestion()">Yes</button>
+    <button id="noButton" onclick="showSureQuestion()">No</button>
+    
+    <!-- Second Question if "Yes" is selected -->
+    <div id="dateQuestion" style="display: none;">
+      <h2>Please select a date:</h2>
+      <button id="wednesdayButton" onclick="showTimeQuestion()">Wednesday</button>
+    </div>
+    
+    <!-- Third Question if "Wednesday" is selected -->
+    <div id="timeQuestion" style="display: none;">
+      <h2>What time?</h2>
+      <button onclick="showConfirmation('Noon')">Noon</button>
+      <button onclick="showConfirmation('Night')">Night</button>
+    </div>
+    
+    <!-- Second Question if "No" is selected -->
+    <div id="confirmQuestion" style="display: none;">
+      <h2>Are you sure?</h2>
+      <button onclick="thankYouNo()">Yes</button>
+      <button onclick="cancelDecision()">No</button>
+    </div>
 
-    <div id="result"></div>
+    <!-- Final Confirmation -->
+    <div id="finalMessage" style="display: none;">
+      <h2 id="confirmationText"></h2>
+      <p>Thank you and have a great time!</p>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
