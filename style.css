@@ -1,22 +1,25 @@
+/* Set background color to light pink */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+    background-color: #f5c6cb; /* Light pink background */
+    font-family: 'Comfortaa', sans-serif; /* Use Comfortaa font */
+    color: black; /* Black text color */
   }
   
-  #container {
-    width: 60%;
-    margin: 0 auto;
+  /* Optional: Style headings if you want them to stand out */
+  h1, h2, h3 {
+    color: black; /* Black text for headings */
   }
   
+  /* Optional: Style buttons */
   button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* White text on buttons */
+    border: none; /* No border */
     padding: 10px 20px;
-    margin: 20px;
-    font-size: 16px;
     cursor: pointer;
   }
   
-  h2 {
-    color: #2c3e50;
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
   }
   
